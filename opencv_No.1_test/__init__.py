@@ -1,6 +1,6 @@
 import cv2 as cv
 
-src = cv.imread("./!face.png")
+src = cv.imread("../images/!face.png")
 cv.namedWindow("NO.1 image",cv.WINDOW_AUTOSIZE)
 cv.imshow("NO.1 image",src)
 cv.waitKey(0)
