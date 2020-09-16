@@ -1,5 +1,6 @@
 #coding:utf-8
 #实时边缘检测
+#先检测人脸 后检测眼睛和微笑
 #导入opencv-python
 import cv2
 #导入科学计算库numpy

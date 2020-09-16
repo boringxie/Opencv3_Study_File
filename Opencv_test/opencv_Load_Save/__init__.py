@@ -22,7 +22,7 @@ def get_image_info(image):
     print(pixel_data)
 
 
-src = cv.imread("./!face.png")
+src = cv.imread("D:\python_file\Opencv3_study_file\images\!face.png")
 cv.namedWindow("NO.1 image",cv.WINDOW_AUTOSIZE)
 cv.imshow("NO.1 image",src)
 gray = cv.cvtColor(src,cv.COLOR_BGR2GRAY)
