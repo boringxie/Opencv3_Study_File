@@ -49,3 +49,29 @@ uint8
 >>> img = cv.merge((b,g,r))
 '''
 #为图像创建边框（填充）
+''':arg
+cv.BORDER_CONSTANT - 添加一个常量彩色边框。该值应作为下一个参数给出。
+cv.BORDER_REFLECT - 边框将反映边框元素，像这样： fedcba_abcdefgh\hgfedcb
+cv.BORDER_REFLECT_101或cv。BORDER_DEFAULT - 与上述相同，但有一个轻微的变化，像这样： gfedcb_abcdefgh\gfedcba
+cv.BORDER_REPLICATE - 最后一个元素在整个过程中复制， 像这样： a _ abcdefgh _ h
+cv.BORDER_WRAP - 无法解释， 它看起来像这样： cdefgh _ abcdefg
+'''
+''':arg
+import cv2 as cv
+import numpy as np
+from matplotlib import pyplot as plt
+BLUE = [255,0,0]
+img1 = cv.imread('opencv-logo.png')
+replicate = cv.copyMakeBorder(img1,10,10,10,10,cv.BORDER_REPLICATE)
+reflect = cv.copyMakeBorder(img1,10,10,10,10,cv.BORDER_REFLECT)
+reflect101 = cv.copyMakeBorder(img1,10,10,10,10,cv.BORDER_REFLECT_101)
+wrap = cv.copyMakeBorder(img1,10,10,10,10,cv.BORDER_WRAP)
+constant= cv.copyMakeBorder(img1,10,10,10,10,cv.BORDER_CONSTANT,value=BLUE)
+plt.subplot(231),plt.imshow(img1,'gray'),plt.title('ORIGINAL')
+plt.subplot(232),plt.imshow(replicate,'gray'),plt.title('REPLICATE')
+plt.subplot(233),plt.imshow(reflect,'gray'),plt.title('REFLECT')
+plt.subplot(234),plt.imshow(reflect101,'gray'),plt.title('REFLECT_101')
+plt.subplot(235),plt.imshow(wrap,'gray'),plt.title('WRAP')
+plt.subplot(236),plt.imshow(constant,'gray'),plt.title('CONSTANT')
+plt.show()
+'''

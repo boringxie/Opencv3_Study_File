@@ -27,7 +27,7 @@ cv.namedWindow("NO.1 image",cv.WINDOW_AUTOSIZE)
 cv.imshow("NO.1 image",src)
 gray = cv.cvtColor(src,cv.COLOR_BGR2GRAY)
 #注意千万不要选择中文目录，否则无法保存
-cv.imwrite("D:/images/face_gray.png",gray)
+cv.imwrite("D:/python_file/Opencv3_study_file/images/face_gray.png",gray)
 cv.waitKey(0)
 cv.destroyAllWindows()
 print("Hi,Python!")
