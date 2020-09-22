@@ -1,8 +1,9 @@
 #coding:utf-8
+#对象追踪图像版本
 import cv2 as cv
 import numpy as np
 
-img = cv.imread('')
+img = cv.imread("D:/python_file/Opencv3_study_file/images/blue.jpg")
 
 
 hsv = cv.cvtColor(img,cv.COLOR_BGR2HSV)

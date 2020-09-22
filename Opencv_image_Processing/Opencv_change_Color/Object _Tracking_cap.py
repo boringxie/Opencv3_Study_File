@@ -1,3 +1,5 @@
+#coding:utf-8
+#对象追踪图像版本
 import cv2 as cv
 import numpy as np
 

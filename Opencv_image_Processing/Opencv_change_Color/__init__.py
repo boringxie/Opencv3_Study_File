@@ -61,3 +61,11 @@ print(flags)
   'COLOR_YUV420sp2RGBA', 'COLOR_mRGBA2RGBA']
 
 '''
+'''
+如何查找要跟踪的 HSV 值？
+
+>>> green = np.uint8([[[0,255,0 ]]])
+>>> hsv_green = cv.cvtColor(green,cv.COLOR_BGR2HSV)
+>>> print( hsv_green )
+[[[ 60 255 255]]]
+'''
